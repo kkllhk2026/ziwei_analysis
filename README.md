@@ -18,9 +18,14 @@ ziwei-lab/
 │   └── tests/             21 條迴歸測試，含兩千張隨機盤不變量檢查
 ├── frontend/              Vite + React 19 + Tailwind 4
 │   └── src/components/ZiweiChart.tsx    ← 命盤
-├── .railway/railway.ts    Infrastructure as Code
+├── .railway/              Infrastructure as Code（SDK 亦放這裡，不放根目錄）
+├── deploy.sh              railway up 包裝：必須在子目錄執行
 └── docs/                  演算法規格、流派清單、部署手冊
 ```
+
+**根目錄刻意沒有 `package.json`。** 有的話 Railpack 會把整個 monorepo 誤判成
+Node app。每個 Railway service 都必須設 Root Directory（`/backend`、`/frontend`），
+詳見 `docs/03-部署手冊.md`。
 
 ## 三個設計決定
 

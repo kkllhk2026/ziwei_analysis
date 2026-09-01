@@ -1,0 +1,6 @@
+{
+  "name": "ziwei-lab",
+  "private": true,
+  "description": "Railway IaC 只需要根目錄有 railway SDK；前後端各自獨立建置。",
+  "devDependencies": { "railway": "^3.1.2" }
+}

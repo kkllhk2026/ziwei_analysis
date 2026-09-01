@@ -1,0 +1,15 @@
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = [
+  "E501",
+  "B008",   # FastAPI 的 Depends() 預設值是官方慣用寫法
+  "UP042",  # str + Enum 是為了直接 JSON 序列化
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
